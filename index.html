@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>pmt</title>
-</head>
-
-<body>
-
-    <form action="/action_page.php">
-        Aizņēmuma summa<br>
-        <input type="text" name="firstname">
-        <br><br>
-        <select name="interest" id="ddlViewBy">
-            <option value="7">7 %</option>
-            <option value="9">9 %</option>
-            <option value="12">12 %</option>
-            <option value="15">15 %</option>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lizinga kalkulators</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <p>Ievadiet līzinga summu</p>
+        <input type="text" name="prsntval" id="presentValue" value="">
+        <p>Izvēlēties gada procentu likmi</p>
+        <select name="interest" id="intrst">
+            <option value="0.07">7 %</option>
+            <option value="0.1">10 %</option>
+            <option value="0.15">15 %</option>
+        </select>
+        <p>Izvēlēties līzinga termiņu</p>
+        <select name="period" id="prd">
+            <option value="6">6 mēn</option>
+            <option value="12">12 mēn</option>
+            <option value="24">24 mēn</option>
+            <option value="18">18 mēn</option>
+            <option value="60">60 mēn</option>
+            <option value="84">84 mēn</option>
         </select>
         <br><br>
-        <select name="period" id="ddlViewBy">
-            <option value="6">6</option>
-            <option value="9">9</option>
-            <option value="12">12</option>
-            <option value="18">18</option>
-            <option value="24">24</option>
-        </select>
+        <button onclick="pmtCalc()">Aprekinat</button>
         <br><br>
-        <input type="submit">
-    </form>
-
-
-    <script type="text/javascript" src="main.js"></script>
-</body>
-
+        <p>Ikmēneša maksājums:</p>
+        <p id="mnthlPay"></p>
+        
+        
+        
+        <script src="main.js" async defer></script>
+    </body>
 </html>
