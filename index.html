@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>pmt</title>
 </head>
+
 <body>
-    
+
+    <form action="/action_page.php">
+        Aizņēmuma summa<br>
+        <input type="text" name="firstname">
+        <br><br>
+        <select name="interest" id="ddlViewBy">
+            <option value="7">7 %</option>
+            <option value="9">9 %</option>
+            <option value="12">12 %</option>
+            <option value="15">15 %</option>
+        </select>
+        <br><br>
+        <select name="period" id="ddlViewBy">
+            <option value="6">6</option>
+            <option value="9">9</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+            <option value="24">24</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+
+
     <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
